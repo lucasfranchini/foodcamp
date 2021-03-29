@@ -59,3 +59,9 @@ body{
 strong{
     font-weight: 700;
 }
+button:focus{
+    outline-width: 0;
+}
+button:hover{
+    cursor: pointer;
+}
