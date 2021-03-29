@@ -51,6 +51,7 @@ body{
     background-color: #EEEEEE;
     display: flex;
     flex-direction: column;
+    font-weight: 400;
 }
 *{
     box-sizing: border-box;
