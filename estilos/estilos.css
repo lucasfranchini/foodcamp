@@ -1,0 +1,31 @@
+.topo{
+    height: 92px;
+    width: 100%;
+    background-color: #CF2B2B;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.principal{
+    margin-top: 123px;
+    height: 50px;
+    background-color: blue;
+}
+.bebida{
+    margin-top: 27px;
+    height: 50px;
+    background-color: blueviolet;
+}
+.sobremesa{
+    margin-top: 27px;
+    height: 50px;
+    background-color: green;
+}
+.final{
+    height: 92px;
+    width: 100%;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
