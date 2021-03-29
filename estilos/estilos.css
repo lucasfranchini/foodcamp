@@ -22,19 +22,47 @@
 }
 .principal{
     margin-top: 123px;
-    height: 242px;
-    background-color: blue;
+    font-size: 26px;
+    font-family: 'Righteous', cursive;
+    color: #333;
+    
+}
+.itens{
+    margin-top: 17px;
+    width: 100%;
+}
+.item{
+    width: 172px;
+    margin-left: 16px;
+    background-color: #fff;
+    border-radius: 9px;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    padding: 18px 14px 13px 14px;
+    line-height: 19px;
+}
+.item img{
+    border-radius: 4px;
+    width: 144px;
+    height: 87px;
+    margin-bottom: 8px;
+}
+.extras{
+    font-weight: 300;
+    color: #a6a6a6;
+    margin: 5px 0px;
+    line-height: 18px;
+}
+.item p:last-child{
+    color: #000;
 }
 .bebida{
     margin-top: 27px;
-    height: 242px;
-    background-color: blueviolet;
 }
 .sobremesa{
     margin-top: 27px;
     margin-bottom: 108px;
-    height: 242px;
-    background-color: green;
 }
 .final{
     height: 92px;
