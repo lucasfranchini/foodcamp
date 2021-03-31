@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,11 @@
     <link rel="stylesheet" href="estilos/reset.css">
     <link rel="stylesheet" href="estilos/estilos.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
     <title>foodcamp</title>
 </head>
+
 <body>
     <div class="topo">
         <p>FoodCamp</p>
@@ -51,69 +54,70 @@
         </div>
         <div class="bebida">
             <p class="titulo">Agora, sua bebida</p>
-            <div class="itens">
-                <article class="item" onclick="bebidas(1)">
+            <ul class="itens">
+                <li class="item" onclick="bebidas(1)">
                     <img src="imagens/coca.jpg" alt="">
                     <p><strong>Refrigerante</strong></p>
                     <p class="extras">Lata 350ml</p>
                     <p>R$ 4,90</p>
                     <ion-icon name="checkmark-circle"></ion-icon>
-                </article>
-                <article class="item" onclick="bebidas(2)">
+                </li>
+                <li class="item" onclick="bebidas(2)">
                     <img src="imagens/laranja.jpg" alt="">
                     <p><strong>Suco</strong></p>
                     <p class="extras">copo 300ml</p>
                     <p>R$ 5,90</p>
                     <ion-icon name="checkmark-circle"></ion-icon>
-                </article>
-                <article class="item" onclick="bebidas(3)">
+                </li>
+                <li class="item" onclick="bebidas(3)">
                     <img src="imagens/laranja.jpg" alt="">
                     <p><strong>Suco Grande</strong></p>
                     <p class="extras">copo 500ml</p>
                     <p>R$ 7,90</p>
                     <ion-icon name="checkmark-circle"></ion-icon>
-                </article>
-                <article class="item" onclick="bebidas(4)">
+                </li>
+                <li class="item" onclick="bebidas(4)">
                     <img src="imagens/Odin.jpg" alt="">
                     <p><strong>Cerveja artesanal</strong></p>
                     <p class="extras">Garrafa 600ml</p>
                     <p>R$ 16,00</p>
                     <ion-icon name="checkmark-circle"></ion-icon>
-                </article>
-        </div>  
-    </div>
-    <div class="sobremesa">
-        <p class="titulo">Por fim, sua sobremesa</p>
-        <div class="itens">
-            <article class="item" onclick="sobremesas(1)" >
-                <img src="imagens/pudim.png" alt="">
-                <p><strong>Pudim</strong></p>
-                <p class="extras">Apenas pudim</p>
-                <p>R$ 14,90</p>
-                <ion-icon name="checkmark-circle"></ion-icon>
-            </article>
-            <article class="item" onclick="sobremesas(2)">
-                <img src="imagens/petit-gateu.jpg" alt="">
-                <p><strong>Petit gateu</strong></p>
-                <p class="extras">sorvete, bolo e calda</p>
-                <p>R$ 16,90</p>
-                <ion-icon name="checkmark-circle"></ion-icon>
-            </article>
-            <article class="item" onclick="sobremesas(3)">
-                <img src="imagens/sorvete.jpg" alt="">
-                <p><strong>Sorvete</strong></p>
-                <p class="extras">apenas sorvete</p>
-                <p>R$ 8,90</p>
-                <ion-icon name="checkmark-circle"></ion-icon>
-            </article>
-            <article class="item" onclick="sobremesas(4)">
-                <img src="imagens/acai.jpg" alt="">
-                <p><strong>Açai</strong></p>
-                <p class="extras">açai 500ml</p>
-                <p>R$ 12,90</p>
-                <ion-icon name="checkmark-circle"></ion-icon>
-            </article>
-    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="sobremesa">
+            <p class="titulo">Por fim, sua sobremesa</p>
+            <ul class="itens">
+                <li class="item" onclick="sobremesas(1)">
+                    <img src="imagens/pudim.png" alt="">
+                    <p><strong>Pudim</strong></p>
+                    <p class="extras">Apenas pudim</p>
+                    <p>R$ 14,90</p>
+                    <ion-icon name="checkmark-circle"></ion-icon>
+                </li>
+                <li class="item" onclick="sobremesas(2)">
+                    <img src="imagens/petit-gateu.jpg" alt="">
+                    <p><strong>Petit gateu</strong></p>
+                    <p class="extras">sorvete, bolo e calda</p>
+                    <p>R$ 16,90</p>
+                    <ion-icon name="checkmark-circle"></ion-icon>
+                </li>
+                <li class="item" onclick="sobremesas(3)">
+                    <img src="imagens/sorvete.jpg" alt="">
+                    <p><strong>Sorvete</strong></p>
+                    <p class="extras">apenas sorvete</p>
+                    <p>R$ 8,90</p>
+                    <ion-icon name="checkmark-circle"></ion-icon>
+                </li>
+                <li class="item" onclick="sobremesas(4)">
+                    <img src="imagens/acai.jpg" alt="">
+                    <p><strong>Açai</strong></p>
+                    <p class="extras">açai 500ml</p>
+                    <p>R$ 12,90</p>
+                    <ion-icon name="checkmark-circle"></ion-icon>
+                </li>
+            </ul>
+        </div>
     </div>
     <div class="final">
         <button>Selecione os 3 itens <br>
@@ -122,4 +126,5 @@
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="scripts.js"></script>
 </body>
+
 </html>
