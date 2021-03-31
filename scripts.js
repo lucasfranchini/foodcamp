@@ -32,6 +32,7 @@ function pratoprincipal (x){
     if(prato_selecionado===1 && bebida_selecionada === 1 && sobremesa_selecionada === 1){
         const botao = document.querySelector("button");
         botao.style.backgroundColor = "#32B72F";
+        botao.innerHTML = "<strong>Fechar pedido</strong>"
     }
 
 }
@@ -65,6 +66,7 @@ function bebidas (x){
     if(prato_selecionado===1 && bebida_selecionada === 1 && sobremesa_selecionada === 1){
         const botao = document.querySelector("button");
         botao.style.backgroundColor = "#32B72F";
+        botao.innerHTML = "<strong>Fechar pedido</strong>"
     }
 }
 function sobremesas (x){
