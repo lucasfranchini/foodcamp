@@ -187,5 +187,5 @@ function requisitar_nome(){
     mensagem_final = ("Olá, gostaria de fazer o pedido:\n - Prato: " + nome_prato +"\n - Bebida: " + nome_bebida +"\n - Sobremesa: " + nome_sobremesa + "\n Total: R$" + preco_total);
     mensagem_final = (mensagem_final+"\n \n Nome: "+nome + "\n Endereço: " + endereco);
     mensagem_final = encodeURIComponent(mensagem_final);
-    link.setAttribute('href', "https://wa.me/5532988350926?text="+mensagem_final);
+    link.setAttribute('href', "https://wa.me/5532988350931?text="+mensagem_final);
 }
