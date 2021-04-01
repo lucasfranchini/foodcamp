@@ -179,7 +179,7 @@ function pedir_ou_cancelar (){
     tela_confirmar.classList.toggle("mostrar");
 }
 function requisitar_nome(){
-    const nome = prompt("pro favor diga seu nome");
+    const nome = prompt("por favor diga seu nome");
     const endereco = prompt("por favor de seu endereço");
     //criando a mensagem do whatsapp
     mensagem_final = ("Olá, gostaria de fazer o pedido:\n - Prato: " + nome_prato +"\n - Bebida: " + nome_bebida +"\n - Sobremesa: " + nome_sobremesa + "\n Total: R$" + preco_total);
