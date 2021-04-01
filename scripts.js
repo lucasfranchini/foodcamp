@@ -176,7 +176,9 @@ function sobremesas (x){
     }
 }
 function pedir_ou_cancelar (){
-    tela_confirmar.classList.toggle("mostrar");
+    if(prato_selecionado===1 && bebida_selecionada === 1 && sobremesa_selecionada === 1){
+        tela_confirmar.classList.toggle("mostrar");
+    }
 }
 function requisitar_nome(){
     const nome = prompt("por favor diga seu nome");
