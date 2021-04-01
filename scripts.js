@@ -59,10 +59,6 @@ function pratoprincipal (x){
         const texto_preco_total = textos_confirmar[3].querySelector("span:nth-child(2)");
         texto_preco_total.innerHTML = ("<strong>R$ "+ preco_total+"</strong>");
         texto_preco_total.innerHTML = texto_preco_total.innerHTML.replace('.',',');
-        //criando a mensagem do whatsapp
-        mensagem_final = ("Olá, gostaria de fazer o pedido:\n - Prato: " + nome_prato +"\n - Bebida: " + nome_bebida +"\n - Sobremesa: " + nome_sobremesa + "\n Total: R$" + preco_total);
-        mensagem_final = encodeURIComponent(mensagem_final);
-        link.setAttribute('href', "https://wa.me/5532988350926?text="+mensagem_final);
     }
 
 }
@@ -120,10 +116,6 @@ function bebidas (x){
         const texto_preco_total = textos_confirmar[3].querySelector("span:nth-child(2)");
         texto_preco_total.innerHTML = ("<strong>R$ "+ preco_total+"</strong>");
         texto_preco_total.innerHTML = texto_preco_total.innerHTML.replace('.',',');
-        // criando a mensagem para o whatsapp
-        mensagem_final = ("Olá, gostaria de fazer o pedido:\n - Prato: " + nome_prato +"\n - Bebida: " + nome_bebida +"\n - Sobremesa: " + nome_sobremesa + "\n Total: R$" + preco_total);
-        mensagem_final = encodeURIComponent(mensagem_final);
-        link.setAttribute('href', "https://wa.me/5532988350926?text="+mensagem_final);
     }
 }
 function sobremesas (x){
@@ -180,13 +172,18 @@ function sobremesas (x){
         const texto_preco_total = textos_confirmar[3].querySelector("span:nth-child(2)");
         texto_preco_total.innerHTML = ("<strong>R$ "+ preco_total+"</strong>");
         texto_preco_total.innerHTML = texto_preco_total.innerHTML.replace('.',',');
-        //criando a mensagem do whatsapp
-        mensagem_final = ("Olá, gostaria de fazer o pedido:\n - Prato: " + nome_prato +"\n - Bebida: " + nome_bebida +"\n - Sobremesa: " + nome_sobremesa + "\n Total: R$" + preco_total);
-        mensagem_final = encodeURIComponent(mensagem_final);
-        link.setAttribute('href', "https://wa.me/5532988350926?text="+mensagem_final);
+        
     }
 }
 function pedir_ou_cancelar (){
     tela_confirmar.classList.toggle("mostrar");
 }
-
+function requisitar_nome(){
+    const nome = prompt("pro favor diga seu nome");
+    const endereco = prompt("por favor de seu endereço");
+    //criando a mensagem do whatsapp
+    mensagem_final = ("Olá, gostaria de fazer o pedido:\n - Prato: " + nome_prato +"\n - Bebida: " + nome_bebida +"\n - Sobremesa: " + nome_sobremesa + "\n Total: R$" + preco_total);
+    mensagem_final = (mensagem_final+"\n \n Nome: "+nome + "\n Endereço: " + endereco);
+    mensagem_final = encodeURIComponent(mensagem_final);
+    link.setAttribute('href', "https://wa.me/5532988350926?text="+mensagem_final);
+}
