@@ -2,6 +2,7 @@ let prato_selecionado =0,sobremesa_selecionada=0,bebida_selecionada=0;
 let preco_principal=0, preco_bebida=0,preco_sobremesa=0,preco_total=0;
 let mensagem_final,nome_prato,nome_bebida,nome_sobremesa;
 const link = document.querySelector("a");
+const tela_confirmar = document.querySelector(".tela_de_compra");
 function pratoprincipal (x){
     const pratos = document.querySelectorAll(".principal .itens .item");
     prato_selecionado=1;
@@ -156,5 +157,11 @@ function sobremesas (x){
         mensagem_final = encodeURIComponent(mensagem_final);
         link.setAttribute('href', "https://wa.me/5532988350926?text="+mensagem_final);
     }
+}
+function mostrar (){
+    tela_confirmar.classList.add("mostrar");
+}
+function cancelar(){
+    tela_confirmar.classList.remove("mostrar");
 }
 
