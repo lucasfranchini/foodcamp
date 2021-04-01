@@ -158,10 +158,7 @@ function sobremesas (x){
         link.setAttribute('href', "https://wa.me/5532988350926?text="+mensagem_final);
     }
 }
-function fechar_pedido (){
-    tela_confirmar.classList.add("mostrar");
-}
-function cancelar(){
-    tela_confirmar.classList.remove("mostrar");
+function pedir_ou_cancelar (){
+    tela_confirmar.classList.toggle("mostrar");
 }
 
