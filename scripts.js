@@ -20,33 +20,13 @@ function pratoprincipal (x){
     nome_prato = pratos[x].querySelector("p:nth-child(2)").innerHTML;
     nome_prato = nome_prato.replace('<strong>','');
     nome_prato = nome_prato.replace('</strong>','')
-    texto_prato.innerHTML = nome_prato;
-    //marcando a caixa escolhida
-    if(x === 0){
-        pratos[0].classList.add("checked");
-        pratos[1].classList.remove("checked");
-        pratos[2].classList.remove("checked");
-        pratos[3].classList.remove("checked");
-        
-    }
-    if(x === 1){
-        pratos[1].classList.add("checked");
-        pratos[0].classList.remove("checked");
-        pratos[2].classList.remove("checked");
-        pratos[3].classList.remove("checked");
-    }
-    if(x === 2){
-        pratos[2].classList.add("checked");
-        pratos[0].classList.remove("checked");
-        pratos[1].classList.remove("checked");
-        pratos[3].classList.remove("checked");
-    }
-    if(x === 3){
-        pratos[3].classList.add("checked");
-        pratos[0].classList.remove("checked");
-        pratos[1].classList.remove("checked");
-        pratos[2].classList.remove("checked");
-    }
+    texto_prato.innerHTML = nome_prato;pratos[0].classList.add("checked")
+     //marcando a caixa escolhida
+    pratos[0].classList.remove("checked");;
+    pratos[1].classList.remove("checked");
+    pratos[2].classList.remove("checked");
+    pratos[3].classList.remove("checked");
+    pratos[x].classList.add("checked");
     if(prato_selecionado===1 && bebida_selecionada === 1 && sobremesa_selecionada === 1){
         //configurando o botão
         const botao = document.querySelector("button");
@@ -80,30 +60,11 @@ function bebidas (x){
     nome_bebida = nome_bebida.replace('</strong>','')
     texto_bebida.innerHTML = nome_bebida;
     //marcanda a caixa escolhida
-    if(x === 0){
-        bebida[0].classList.add("checked");
-        bebida[1].classList.remove("checked");
-        bebida[2].classList.remove("checked");
-        bebida[3].classList.remove("checked");
-    }
-    if(x === 1){
-        bebida[1].classList.add("checked");
-        bebida[0].classList.remove("checked");
-        bebida[2].classList.remove("checked");
-        bebida[3].classList.remove("checked");
-    }
-    if(x === 2){
-        bebida[2].classList.add("checked");
-        bebida[0].classList.remove("checked");
-        bebida[1].classList.remove("checked");
-        bebida[3].classList.remove("checked");
-    }
-    if(x === 3){
-        bebida[3].classList.add("checked");
-        bebida[0].classList.remove("checked");
-        bebida[1].classList.remove("checked");
-        bebida[2].classList.remove("checked");
-    }
+    bebida[0].classList.remove("checked");;
+    bebida[1].classList.remove("checked");
+    bebida[2].classList.remove("checked");
+    bebida[3].classList.remove("checked");
+    bebida[x].classList.add("checked");
     if(prato_selecionado===1 && bebida_selecionada === 1 && sobremesa_selecionada === 1){
         //configurando o botão
         const botao = document.querySelector("button");
@@ -136,30 +97,11 @@ function sobremesas (x){
     nome_sobremesa = nome_sobremesa.replace('</strong>','')
     texto_sobremesa.innerHTML = nome_sobremesa;
     //marcando a caixa escolhida
-    if(x === 0){
-        sobremesa[0].classList.add("checked");
-        sobremesa[1].classList.remove("checked");
-        sobremesa[2].classList.remove("checked");
-        sobremesa[3].classList.remove("checked");
-    }
-    if(x === 1){
-        sobremesa[1].classList.add("checked");
-        sobremesa[0].classList.remove("checked");
-        sobremesa[2].classList.remove("checked");
-        sobremesa[3].classList.remove("checked");
-    }
-    if(x === 2){
-        sobremesa[2].classList.add("checked");
-        sobremesa[0].classList.remove("checked");
-        sobremesa[1].classList.remove("checked");
-        sobremesa[3].classList.remove("checked");
-    }
-    if(x === 3){
-        sobremesa[3].classList.add("checked");
-        sobremesa[0].classList.remove("checked");
-        sobremesa[1].classList.remove("checked");
-        sobremesa[2].classList.remove("checked");
-    }
+    sobremesa[0].classList.remove("checked");;
+    sobremesa[1].classList.remove("checked");
+    sobremesa[2].classList.remove("checked");
+    sobremesa[3].classList.remove("checked");
+    sobremesa[x].classList.add("checked");
     if(prato_selecionado===1 && bebida_selecionada === 1 && sobremesa_selecionada === 1){
         //configurando o botão
         const botao = document.querySelector("button");
@@ -187,5 +129,5 @@ function requisitar_nome(){
     mensagem_final = ("Olá, gostaria de fazer o pedido:\n - Prato: " + nome_prato +"\n - Bebida: " + nome_bebida +"\n - Sobremesa: " + nome_sobremesa + "\n Total: R$" + preco_total);
     mensagem_final = (mensagem_final+"\n \n Nome: "+nome + "\n Endereço: " + endereco);
     mensagem_final = encodeURIComponent(mensagem_final);
-    link.setAttribute('href', "https://wa.me/5532988350931?text="+mensagem_final);
+    link.setAttribute('href', "https://wa.me/5532988417685?text="+mensagem_final);
 }
