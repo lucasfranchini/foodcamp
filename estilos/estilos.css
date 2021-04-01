@@ -112,13 +112,13 @@
     justify-content: center;
 }
 a{
-	width: calc(100% - 50px);
+	width: 100%;
     display: flex;
     align-items: center;
     text-decoration: none;
 }
 .final button{
-    width: 100%;
+    width: calc(100% - 50px);
     height: 61px;
     border-radius: 50px;
     border: hidden;
@@ -128,6 +128,20 @@ a{
     line-height: 23px;
     letter-spacing: 0.018em;
 }
-.verde{
-    background-color: #32B72F;
+.tela_de_compra{
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.confirmacao{
+    background-color: #50D074;
+    width: calc(100% - 36px);
+    height: 353px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
 }
