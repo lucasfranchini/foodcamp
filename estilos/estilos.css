@@ -67,7 +67,7 @@
     margin: 5px 0px;
     line-height: 18px;
 }
-.item p:last-child{
+.item p:nth-child(4){
     color: #000;
 }
 .item ion-icon{
