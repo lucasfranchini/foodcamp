@@ -33,6 +33,8 @@ function pratoprincipal (x){
         const botao = document.querySelector("button");
         botao.style.backgroundColor = "#32B72F";
         botao.innerHTML = "<strong>Fechar pedido</strong>"
+        const link = document.querySelector("a");
+        link.setAttribute('href', "123");
     }
 
 }
@@ -67,6 +69,8 @@ function bebidas (x){
         const botao = document.querySelector("button");
         botao.style.backgroundColor = "#32B72F";
         botao.innerHTML = "<strong>Fechar pedido</strong>"
+        const link = document.querySelector("a");
+        link.setAttribute('href', "123");
     }
 }
 function sobremesas (x){
@@ -99,7 +103,9 @@ function sobremesas (x){
     if(prato_selecionado===1 && bebida_selecionada === 1 && sobremesa_selecionada === 1){
         const botao = document.querySelector("button");
         botao.style.backgroundColor = "#32B72F";
-        botao.innerHTML = "<strong>Fechar pedido</strong>"
+        botao.innerHTML = "<strong>Fechar pedido</strong>";
+        const link = document.querySelector("a");
+        link.setAttribute('href', "123");
     }
 }
 
