@@ -131,3 +131,11 @@ function requisitar_nome(){
     mensagem_final = encodeURIComponent(mensagem_final);
     link.setAttribute('href', "https://wa.me/5532988417685?text="+mensagem_final);
 }
+/* linhas para poder desmarcar a opção daquele alimento
+if(document.querySelector(".bebida .itens .checked") === null){
+    bebida_selecionada=0;
+     //configurando o botão
+     const botao = document.querySelector("button");
+     botao.style.backgroundColor = "#cbcbcb";
+     botao.innerHTML = "Selecione os 3 itens <br>para fechar o pedido"
+}*/
