@@ -3,18 +3,24 @@ let preco_principal=0, preco_bebida=0,preco_sobremesa=0,preco_total=0;
 let mensagem_final,nome_prato,nome_bebida,nome_sobremesa;
 const link = document.querySelector("a");
 const tela_confirmar = document.querySelector(".tela_de_compra");
+const textos_confirmar = document.querySelectorAll(".confirmacao div");
 function pratoprincipal (x){
     const pratos = document.querySelectorAll(".principal .itens .item");
+    const texto_prato = textos_confirmar[0].querySelector("span");
+    const texto_preco_prato = textos_confirmar[0].querySelector("span:nth-child(2)");
     prato_selecionado=1;
     // transformando o valor do prato em um numero para a soma no final
     preco_principal = pratos[x].querySelector("p:nth-child(4)").innerHTML;
     preco_principal = preco_principal.replace('R$ ','');
     preco_principal = preco_principal.replace(',','.');
     preco_principal = parseFloat(preco_principal);
+    texto_preco_prato.innerHTML = preco_principal.toFixed(2);
+    texto_preco_prato.innerHTML = texto_preco_prato.innerHTML.replace('.',',');
     // adquirindo o nome da alimento
     nome_prato = pratos[x].querySelector("p:nth-child(2)").innerHTML;
     nome_prato = nome_prato.replace('<strong>','');
     nome_prato = nome_prato.replace('</strong>','')
+    texto_prato.innerHTML = nome_prato;
     //marcando a caixa escolhida
     if(x === 0){
         pratos[0].classList.add("checked");
@@ -49,6 +55,10 @@ function pratoprincipal (x){
         //somando os alimentos
         preco_total= preco_principal+preco_bebida+preco_sobremesa;
         preco_total =preco_total.toFixed(2);
+        //configurando a tela de confirmação do pedido
+        const texto_preco_total = textos_confirmar[3].querySelector("span:nth-child(2)");
+        texto_preco_total.innerHTML = ("<strong>R$ "+ preco_total+"</strong>");
+        texto_preco_total.innerHTML = texto_preco_total.innerHTML.replace('.',',');
         //criando a mensagem do whatsapp
         mensagem_final = ("Olá, gostaria de fazer o pedido:\n - Prato: " + nome_prato +"\n - Bebida: " + nome_bebida +"\n - Sobremesa: " + nome_sobremesa + "\n Total: R$" + preco_total);
         mensagem_final = encodeURIComponent(mensagem_final);
@@ -58,16 +68,21 @@ function pratoprincipal (x){
 }
 function bebidas (x){
     const bebida = document.querySelectorAll(".bebida .itens .item");
+    const texto_bebida = textos_confirmar[1].querySelector("span");
+    const texto_preco_bebida = textos_confirmar[1].querySelector("span:nth-child(2)");
     bebida_selecionada=1;
     // transformando o valor do prato em um numero para a soma no final
     preco_bebida = bebida[x].querySelector("p:nth-child(4)").innerHTML;
     preco_bebida = preco_bebida.replace('R$ ','');
     preco_bebida = preco_bebida.replace(',','.');
     preco_bebida = parseFloat(preco_bebida);
+    texto_preco_bebida.innerHTML = preco_bebida.toFixed(2);
+    texto_preco_bebida.innerHTML = texto_preco_bebida.innerHTML.replace('.',',');
     // adquirindo o nome da alimento
     nome_bebida = bebida[x].querySelector("p:nth-child(2)").innerHTML;
     nome_bebida = nome_bebida.replace('<strong>','');
     nome_bebida = nome_bebida.replace('</strong>','')
+    texto_bebida.innerHTML = nome_bebida;
     //marcanda a caixa escolhida
     if(x === 0){
         bebida[0].classList.add("checked");
@@ -101,6 +116,10 @@ function bebidas (x){
         // somando os alimentos
         preco_total= preco_principal+preco_bebida+preco_sobremesa;
         preco_total =preco_total.toFixed(2);
+        //configurando a tela de confirmação do pedido
+        const texto_preco_total = textos_confirmar[3].querySelector("span:nth-child(2)");
+        texto_preco_total.innerHTML = ("<strong>R$ "+ preco_total+"</strong>");
+        texto_preco_total.innerHTML = texto_preco_total.innerHTML.replace('.',',');
         // criando a mensagem para o whatsapp
         mensagem_final = ("Olá, gostaria de fazer o pedido:\n - Prato: " + nome_prato +"\n - Bebida: " + nome_bebida +"\n - Sobremesa: " + nome_sobremesa + "\n Total: R$" + preco_total);
         mensagem_final = encodeURIComponent(mensagem_final);
@@ -109,16 +128,21 @@ function bebidas (x){
 }
 function sobremesas (x){
     const sobremesa = document.querySelectorAll(".sobremesa .itens .item");
+    const texto_sobremesa = textos_confirmar[2].querySelector("span");
+    const texto_preco_sobremesa = textos_confirmar[2].querySelector("span:nth-child(2)");
     sobremesa_selecionada=1;
     // transformando o valor do prato em um numero para a soma no final
     preco_sobremesa = sobremesa[x].querySelector("p:nth-child(4)").innerHTML;
     preco_sobremesa = preco_sobremesa.replace('R$ ','');
     preco_sobremesa = preco_sobremesa.replace(',','.');
     preco_sobremesa = parseFloat(preco_sobremesa);
+    texto_preco_sobremesa.innerHTML = preco_sobremesa.toFixed(2);
+    texto_preco_sobremesa.innerHTML = texto_preco_sobremesa.innerHTML.replace('.',',');
     // adquirindo o nome da alimento
     nome_sobremesa = sobremesa[x].querySelector("p:nth-child(2)").innerHTML;
     nome_sobremesa = nome_sobremesa.replace('<strong>','');
     nome_sobremesa = nome_sobremesa.replace('</strong>','')
+    texto_sobremesa.innerHTML = nome_sobremesa;
     //marcando a caixa escolhida
     if(x === 0){
         sobremesa[0].classList.add("checked");
@@ -152,6 +176,10 @@ function sobremesas (x){
         //somando os alimentos
         preco_total= preco_principal+preco_bebida+preco_sobremesa;
         preco_total =preco_total.toFixed(2);
+        //configurando a tela de confirmação do pedido
+        const texto_preco_total = textos_confirmar[3].querySelector("span:nth-child(2)");
+        texto_preco_total.innerHTML = ("<strong>R$ "+ preco_total+"</strong>");
+        texto_preco_total.innerHTML = texto_preco_total.innerHTML.replace('.',',');
         //criando a mensagem do whatsapp
         mensagem_final = ("Olá, gostaria de fazer o pedido:\n - Prato: " + nome_prato +"\n - Bebida: " + nome_bebida +"\n - Sobremesa: " + nome_sobremesa + "\n Total: R$" + preco_total);
         mensagem_final = encodeURIComponent(mensagem_final);
